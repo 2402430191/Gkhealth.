@@ -1,10 +1,11 @@
 package com.gk.gkhealth.controller;
 
 
-import com.github.pagehelper.Page;
+
 import com.gk.gkhealth.entity.Student;
 import com.gk.gkhealth.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
@@ -40,7 +41,6 @@ public class StudentController {
 
     @GetMapping("/query")
     public Page<Student> findByPage(Integer page, HttpServletResponse response) {
-
         response.setHeader("Access-Control-Allow-Origin","*");//解决跨域请求
 
         if (page == null || page <= 0) {

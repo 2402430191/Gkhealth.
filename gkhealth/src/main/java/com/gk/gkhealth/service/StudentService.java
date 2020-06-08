@@ -1,9 +1,7 @@
 package com.gk.gkhealth.service;
 
-import com.github.pagehelper.Page;
 import com.gk.gkhealth.entity.Student;
-
-import java.util.Optional;
+import org.springframework.data.domain.Page;
 
 public interface StudentService {
     Student save(Student student);
