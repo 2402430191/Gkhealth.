@@ -30,6 +30,7 @@ public class StudentController {
         s.setPassword(student.getPassword());
         s.setSex(student.getSex());
         s.setStudentId(student.getStudentId());
+        studentService.save(s);
         return s;
     }
 
